@@ -1,6 +1,6 @@
 <?php
 
-namespace Phalbee\Model;
+namespace Phalbee\Base;
 
 use Phalcon\Mvc\Model as BaseModel;
 
