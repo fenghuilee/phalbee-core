@@ -1,6 +1,6 @@
 <?php
 
-namespace Phalbee\Base;
+namespace Phalbee\Base\View\Engine;
 
 use Phalcon\DiInterface;
 use Phalcon\Mvc\View\Engine;
