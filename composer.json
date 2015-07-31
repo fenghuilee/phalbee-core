@@ -1,6 +1,6 @@
 {
     "name": "fenghuilee/phalbee-core",
-    "description": "Core Phalbee",
+    "description": "Phalbee Core Framework",
     "keywords": ["phalbee", "phalcon", "framework", "mvc"],
     "homepage": "https://github.com/fenghuilee/phalbee-core",
     "type": "library",
