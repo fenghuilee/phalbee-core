@@ -5,6 +5,7 @@
     "homepage": "https://github.com/fenghuilee/phalbee-core",
     "type": "library",
     "license": "MIT",
+    "version": "0.0.1-dev",
     "authors": [
         {
             "name": "Fenghui Lee",
