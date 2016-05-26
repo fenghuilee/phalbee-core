@@ -41,3 +41,34 @@ function dump($var, $echo=true, $label=null, $strict=true) {
     }else
         return $output;
 }
+
+
+/**
+ * 将下划线命名转换为驼峰式命名
+ * @param string $var 变量
+ * @param boolean $ucfirst 是否首字符大写 默认为true
+ * @return string
+ */
+function convert_to_camel_case_format( $var , $ucfirst = true ) {
+    $var = ucwords(str_replace('_', ' ', $var));
+    $var = str_replace(' ','',lcfirst($var));
+    return $ucfirst ? ucfirst($var) : $var;
+}
+
+/**
+ * 获取一个变量的setter方法名(驼峰式命名)
+ * @param string $var 变量
+ * @return string
+ */
+function setter( $var ) {
+    return 'set' . convert_to_camel_case_format( $var , true );
+}
+
+/**
+ * 获取一个变量的getter方法名(驼峰式命名)
+ * @param string $var 变量
+ * @return string
+ */
+function getter( $var ) {
+    return 'get' . convert_to_camel_case_format( $var , true );
+}

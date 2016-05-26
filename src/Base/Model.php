@@ -2,14 +2,11 @@
 
 namespace Phalbee\Base;
 
-use Phalcon\Mvc\Model as BaseModel;
-
-class Model extends BaseModel
+class Model extends \Phalcon\Mvc\Model
 {
-    public function initialize()
+    public function initialize($driver = 'db')
     {
-        $this->setConnectionService('db');
-        $db = include(ROOT_DIR . "/app/configs/db.php");
+        $db = $this->getDI()->get($driver)->getDescriptor();
         if (array_key_exists('prefix', $db))
             $this->setSource($db['prefix'].strtolower(substr(strrchr(get_class($this), "\\"), 1)));
         else
